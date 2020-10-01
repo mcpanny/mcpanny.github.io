@@ -49,8 +49,7 @@ publons_id: # your ID on Publons
 research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 
-contact_note: >
-  You can reach me best via email.
+contact_note: You can reach me best via email.
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 
