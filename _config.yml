@@ -40,7 +40,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: mcpanny # your GitHub user name
 twitter_username: # your Twitter handle
-linkedin_username: https://www.linkedin.com/in/panvang/ # your LinkedIn user name
+linkedin_username: panvang # your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
@@ -50,7 +50,7 @@ research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 
 contact_note: >
-  You can reach my best via email.
+  You can reach me best via email.
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 
