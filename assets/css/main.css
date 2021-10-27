@@ -356,7 +356,7 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 	display: block;
 	position: relative;
 	border: dashed 3px #FCB8A2;
-	padding: 40px 60px;
+	padding: 40px 30px;
 	max-width: 800px;
 	margin: 0px auto 0;
 	font-size: 17px;
@@ -387,7 +387,7 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 	display: block;
 	position: relative;
 	border: dashed 3px #99A885;
-	padding: 40px 60px;
+	padding: 40px 30px;
 	max-width: 800px;
 	margin: 0px auto 0;
 	font-size: 17px;
