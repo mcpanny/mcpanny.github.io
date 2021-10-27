@@ -1,113 +1,196 @@
-/******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. *****************************************************************************/
-/* Set theme colors *************************/
-/****************************************************************************** Content *****************************************************************************/
-body { padding-bottom: 70px; color: #111; }
+* {
+	box-sizing: border-box;
+}
 
-body.fixed-top-nav { padding-top: 56px; }
+body { 
+	font-size: 1.25rem;
+	padding-bottom: 70px;
+	color: #181212 !important; 
+	font-family: 'Inter', sans-serif;
+}
 
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.btn-flower {
+	width: 50px;
+}
+
+.btnTopImage:after {
+    content:'';
+    width: 15px; 
+    height: 15px; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;   
+    border-top: 20px solid #f00;
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translatex(-50%);
+}
+
+.fixed-top-nav { 
+	left: 0;
+	right: 0;
+	position: fixed;
+	top: 0;
+	border-width: 0 0 1px;
+	z-index: 1030;
+	margin-bottom: 70px;
+}
+
+#divScrollBtn {	
+    display: block;
+	visibility: hidden;
+	opacity: 0;
+    transition: visibility 0s,opacity .5s ease-in;
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+	height: 30px;
+	width: 30px;
+}
+
+.btn-round {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-color: #99a885;
+	padding: 10px;
+}
+
+@keyframes bounce {
+	from {
+	  transform: translateY(0px);
+	}
+	to {
+	  transform: translateY(-20px);
+	}
+}
+
+.box:hover {
+animation:
+  bounce 300ms
+  alternate infinite
+  cubic-bezier(.2, .65, .6, 1);
+}
+  
 body.sticky-bottom-footer { padding-bottom: 0; }
 
-.container { max-width: 800px; }
+.container { 
+	max-width: 800px; 
+	margin-top: 80px;
+}
 
 .profile img { width: 100%; }
 
-/****************************************************************************** Publications *****************************************************************************/
-/*****************************************************************************
-* Projects
-*****************************************************************************/
-/******************************************************************************* Styles for the base elements of the theme. *****************************************************************************/
-a, table.table a { color: #B509AC; }
-a:hover, table.table a:hover { color: #B509AC; text-decoration: underline; }
-a:hover:after, table.table a:hover:after { width: 100%; }
+.default-font-color { color: #181212; }
+.brand-color { color: #FCB8A2; }
+.dark-accent-color { color: #99A885; }
+.light-accent-color { color: #CDC8BF; }
+.light-shade-color { color: #F6F6F6; }
+.dark-shade-color { color: #A37A6D; }
 
-.equation { margin-bottom: 1rem; text-align: center; }
+.job-title {
+	color: #181212;
+	position: absolute;
+	font-size: 1.5rem;
+}
 
-.caption { font-size: 0.875rem; margin-top: 0.75rem; margin-bottom: 1.5rem; text-align: center; }
+code {
+	color: #99A885;
+}
 
-.profile { margin-left: 1rem; width: 100%; }
-.profile .address { margin-bottom: 5px; margin-top: 5px; font-family: monospace; font-size: 1.2rem; }
-.profile .address p { display: inline-block; margin: 0; }
+#background {
+	left: 0;
+    top: -1vw;
+    width: 30vw;
+	fill: #99A885;
+    position: absolute;
+    transition: fill 0.2s;
+    z-index: -1;
+}
 
-@media (min-width: 576px) { .profile { width: 30%; }
-  .profile .address p { display: block; } }
-.post-description { margin-bottom: 2rem; }
-.post-description a { color: inherit; font-size: 0.875rem; }
-.post-description a:hover { color: #B509AC; text-decoration: none; }
+.content-animation {
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
+}
 
-.navbar { box-shadow: none; border-bottom: 1px solid #e8e8e8; opacity: 0.95; }
+@keyframes slideDown {
+	0% {
+	  transform: translateY(-100%);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
-.navbar.navbar-light a:hover { text-decoration: none; }
-.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover { color: #B509AC; }
-.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link { background-color: inherit; color: #B509AC; font-weight: bolder; }
-.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover { color: #B509AC; }
-.navbar.navbar-light .contact-icon { font-size: 2rem; }
-.navbar.navbar-light .contact-icon a { color: #424242; }
-.navbar.navbar-light .contact-icon a:hover { color: #B509AC; }
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
-.navbar-toggler .icon-bar { display: block; width: 22px; height: 2px; background-color: #424242; border-radius: 1px; margin-bottom: 4px; transition: all 0.2s; }
-.navbar-toggler .top-bar { transform: rotate(45deg); transform-origin: 10% 10%; }
-.navbar-toggler .middle-bar { opacity: 0; }
-.navbar-toggler .bottom-bar { transform: rotate(-45deg); transform-origin: 10% 90%; }
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
-.navbar-toggler.collapsed .top-bar { transform: rotate(0); }
-.navbar-toggler.collapsed .middle-bar { opacity: 1; }
-.navbar-toggler.collapsed .bottom-bar { transform: rotate(0); }
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
-.news table td { font-size: 1rem; }
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
-.social { text-align: center; }
-.social .contact-icon { font-size: 4rem; }
-.social .contact-icon a { color: #424242; }
-.social .contact-icon a:hover { color: #B509AC; }
-.social .contact-note { font-size: 0.8rem; }
+.banner-logo {
+	width: 40px;
+}
 
-footer.fixed-bottom { color: #c2c2c2; background-color: #424242; font-size: 0.75rem; }
-footer.fixed-bottom .container { padding-top: 9px; padding-bottom: 8px; }
-footer.fixed-bottom a { color: white; }
-footer.fixed-bottom a:hover { color: #f648ed; text-decoration: none; }
+.square-portrait {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding-bottom: 40px; font-size: 0.9rem; }
+.square-portrait img{
+    width: 100%;
+    height: auto;
+    margin-top: -60px;
+}
 
-.header-bar { border-bottom: 1px solid #e8e8e8; text-align: center; padding-top: 2rem; padding-bottom: 5rem; }
-.header-bar h1 { color: #B509AC; font-size: 5rem; }
+.no-whitespace {
+	whitespace: nowrap;
+}
 
-.post-list { margin: 0; margin-bottom: 40px; padding: 0; }
-.post-list li { border-bottom: 1px solid #e8e8e8; list-style: none; padding-top: 2rem; padding-bottom: 2rem; }
-.post-list li .post-meta { color: #828282; font-size: 0.875rem; margin-bottom: 0; }
-.post-list li a { color: black; text-decoration: none; }
-.post-list li a:hover { color: #B509AC; }
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
-.pagination .page-item.active .page-link { background-color: #B509AC; }
-.pagination .page-item.active .page-link:hover { background-color: #B509AC; }
+.rotate-me:hover, .rotate-me:hover:after {
+  animation: rotation 2s linear infinite;
+  transform-origin: 50% 50%;
+}
 
-.distill a:hover { border-bottom-color: #B509AC; text-decoration: none; }
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-.projects .grid-item { width: 250px; margin-bottom: 10px; }
-.projects .grid-item a { color: black; text-decoration: none; }
-.projects .grid-item a:hover { color: #B509AC; }
-.projects .card img { width: 100%; }
-
-.publications { margin-top: 2rem; }
-.publications h1 { color: #B509AC; font-size: 2rem; text-align: center; margin-top: 1em; margin-bottom: 1em; }
-.publications h2 { margin-bottom: 1rem; }
-.publications h2 span { font-size: 1.5rem; }
-.publications h2.year { color: #e8e8e8; border-top: 1px solid #e8e8e8; padding-top: 1rem; margin-top: 2rem; margin-bottom: -2rem; text-align: right; }
-.publications ol.bibliography { list-style: none; padding: 0; margin-top: 0; }
-.publications ol.bibliography li { margin-bottom: 1rem; }
-.publications ol.bibliography li .abbr { height: 2rem; margin-bottom: 0.5rem; }
-.publications ol.bibliography li .abbr abbr { display: inline-block; background-color: #B509AC; padding-left: 1rem; padding-right: 1rem; }
-.publications ol.bibliography li .abbr abbr a { color: white; }
-.publications ol.bibliography li .abbr abbr a:hover { text-decoration: none; }
-.publications ol.bibliography li .abbr .award { color: #B509AC !important; border: 1px solid #B509AC; }
-.publications ol.bibliography li .title { font-weight: bolder; }
-.publications ol.bibliography li .author a { border-bottom: 1px dashed #B509AC; }
-.publications ol.bibliography li .author a:hover { border-bottom-style: solid; text-decoration: none; }
-.publications ol.bibliography li .author > em { border-bottom: 1px solid; font-style: normal; }
-.publications ol.bibliography li .links a.btn { color: #111; border: 1px solid #111; padding-left: 1rem; padding-right: 1rem; padding-top: 0.25rem; padding-bottom: 0.25rem; }
-.publications ol.bibliography li .links a.btn:hover { color: #B509AC; border-color: #B509AC; }
-.publications ol.bibliography li .hidden { font-size: 0.875rem; max-height: 0px; overflow: hidden; text-align: justify; -webkit-transition: 0.15s ease; -moz-transition: 0.15s ease; -ms-transition: 0.15s ease; -o-transition: 0.15s ease; transition: all 0.15s ease; }
-.publications ol.bibliography li .hidden p { line-height: 1.4em; margin: 10px; }
-.publications ol.bibliography li .hidden pre { font-size: 1em; line-height: 1.4em; padding: 10px; }
-.publications ol.bibliography li .hidden.open { max-height: 100em; -webkit-transition: 0.15s ease; -moz-transition: 0.15s ease; -ms-transition: 0.15s ease; -o-transition: 0.15s ease; transition: all 0.15s ease; }
-.publications ol.bibliography li div.abstract.hidden { border: dashed 1px white; }
-.publications ol.bibliography li div.abstract.hidden.open { border-color: #828282; }
