@@ -2,7 +2,17 @@ $(document).ready(function() {
 	window.onscroll = function() {checkScroll()};
 	var divScrollBtn = document.getElementById("divScrollBtn");
 	var navbar = document.getElementById("navbar");
-	
+	const navLinks = document.querySelectorAll('.nav-item')
+	const menuToggle = document.getElementById('navbarSupportedContent')
+	const bsCollapse = new bootstrap.Collapse(menuToggle)
+	navLinks.forEach((l) => {
+		l.addEventListener('click', () => { 
+		if (menuToggle.classList.contains('show'))
+		{
+			bsCollapse.toggle()	
+		}
+		})
+	})
 	function checkScroll() {
 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
 		{			

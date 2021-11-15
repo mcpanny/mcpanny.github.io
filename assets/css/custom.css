@@ -1,1 +1,63 @@
-.accent-color { color: #B509AC; }
+/* theme colors */
+:root {
+    --dark-color: #1D3557;
+    --light-color: #A8DADC;
+    --primary-color: #E63946;
+    --secondary-color: #457B9D;
+    --info-color: #F1FAEE;
+
+    --dark-hover-color: #5499fa;
+    --light-hover-color: #caf0f1;
+    --primary-hover-color: #eb6b75;
+    --secondary-hover-color: #198ed6;
+    --info-hover-color: #a2c995;
+
+}
+/* end theme colors */
+
+* {
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    width: 1152px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+/* header nav */
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-nav .menu-items {
+    display: flex;
+    list-style: none;
+}
+/***waves by https://www.shapedivider.app/***/
+.custom-shape-divider-top-1635375248 {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1635375248 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+	animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+	transform: translate3d(0, 0, 0);
+}
+
+.custom-shape-divider-top-1635375248 .shape-fill {
+    fill: #F8F9FA;
+}
+/***end waves by https://www.shapedivider.app/***/

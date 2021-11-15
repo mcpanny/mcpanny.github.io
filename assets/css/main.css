@@ -15,8 +15,12 @@ body {
   }
 }
 
+#about {
+	width: auto;
+	margin: auto;
+}
 .btn-flower {
-	width: 50px;
+	width: 40px;
 }
 
 .fixed-top-nav { 
@@ -35,8 +39,8 @@ body {
 	opacity: 0;
     transition: visibility 0s,opacity .5s ease-in;
     position: fixed;
-    bottom: 65px;
-    right: 65px;
+    bottom: 30px;
+    right: 30px;
 	height: 30px;
 	width: 30px;
 }
@@ -100,7 +104,7 @@ code {
 }
 
 nice-font {
-	color: #181212;
+	color: #181212 !important;
 }
 
 #background {
@@ -237,10 +241,7 @@ nice-font {
 
 @keyframes animated-text{
 	from{width: 0;}
-	to{width: 350px;}
-}
-
-.sticky-top {
+	to{width: 120px;}
 }
 
 .rotate-me:hover, .rotate-me:hover:after {
@@ -261,7 +262,7 @@ nice-font {
 .arrow-down {
 	position:absolute;
 	top: -25px;
-	left: 9px;
+	left: 6px;
 	width:0; 
 	height:0; 
 	border-left:15px solid transparent;
@@ -313,10 +314,9 @@ nice-font {
 	bottom: 0;
 }
 
-#about {
-	padding-left: 150px;
-	padding-right: 150px;
+.contact-links {
 }
+
 .social { text-align: center; }
 .social .contact-icon { font-size: 4rem; }
 .social .contact-icon a { color: #424242; }
@@ -427,4 +427,71 @@ a:hover:after, table.table a:hover:after { width: 100%; }
     fill: #F8F9FA;
 }
 
+@media (max-width: 600px) { 
+	.btn-flower {width: 25px;}
 
+	.arrow-down {
+		position: absolute;
+    	top: -10px;
+		left: 3px;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #99a885;
+	}
+
+	.flower {
+		right: -40px;
+		bottom: -50px;
+	}
+	#divScrollBtn {
+		bottom: 60px;
+		right: 50px;
+		}
+ }
+
+ @media (max-width: 400px) { 
+	#divScrollBtn {
+	bottom: 60px;
+	right: 50px;
+	}
+	#navbar {
+		width: calc(100vw);
+	} 
+	#about {
+		width: calc(100vw);
+	}
+	.btn-flower {width: 25px;}
+
+	.arrow-down {
+		position: absolute;
+    	top: -10px;
+		left: 3px;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #99a885;
+	}
+
+	.flower {
+		right: -40px;
+		bottom: -50px;
+	}
+
+	.square-portrait {
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.square-portrait img{
+		width: 100%;
+		height: auto;
+		margin-top: -60px;
+	}
+
+	.contact-links {
+	}
+ }
