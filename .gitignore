@@ -5,3 +5,5 @@ _site
 .ruby-version
 Gemfile.lock
 
+index2.html
+assets/js/main.js
